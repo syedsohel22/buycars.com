@@ -9,8 +9,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/users", userRouter);
-app.use("oem", oemRouter);
-app.use("market", marketplaceRouter);
+app.use("/oem", oemRouter);
+app.use("/market", marketplaceRouter);
 app.get("/", (req, res) => {
   res.status(200).send("<h1>Hello World from Buycars api.</h1>");
 });
